@@ -12,9 +12,18 @@ res.render('register');
 });
 
 // Login
-router.get('/login',function(req,res){
+router.get('/login',sureAuthenticated,function(req,res){
 res.render('login');
 });
+
+function sureAuthenticated(req,res,next)
+{
+    if(req.isAuthenticated()){
+            res.redirect('/');
+    }else{
+        return next();
+    }
+}
 
 // Register User
 router.post('/register',function(req,res){

@@ -68,7 +68,6 @@ npm install mongoose
 
 passport (used for authentication purpose)
 https://www.npmjs.com/package/passport
-http://passportjs.org
 npm install passport
 
 passports (used for authentication purpose) optional
