@@ -1,0 +1,83 @@
+install node js
+install mongo db
+
+********************************************
+Follow steps to create collection in mongodb
+********************************************
+mongod.exe --dbpath "c:\data\db"
+mongo
+use loginapp
+db.createCollection('users');
+show collections
+
+*******************
+after Registration.
+*******************
+db.users.find()
+
+****************************
+
+create project directory
+cd <project directory>
+npm iinit (this creates a package .json file)
+
+*******Dependencies**********
+bcrypt.js for password parsing
+https://www.npmjs.com/package/bcryptjs <code for bcrypt>
+npm install bcryptjs --save
+
+bodyparser.js (parsing json and body text)
+https://www.npmjs.com/package/body-parser
+npm install body-parser --save
+
+connect-flash (for flash messages)
+https://www.npmjs.com/package/connect-flash
+npm install connect-flash
+
+cookie-parser (working with coookies)
+https://www.npmjs.com/package/cookie-parser
+npm install cookie-parser
+
+express (express server)
+https://www.npmjs.com/package/express
+npm install express
+
+express-handlebars (express handlers)
+https://www.npmjs.com/package/express-handlebars
+npm install express-handlebars
+
+express-messages (class messaging)
+https://www.npmjs.com/package/express-messages
+npm install express-messages
+
+express-session (class messaging)
+https://www.npmjs.com/package/express-session
+npm install express-session
+
+express-validator (validate code)
+https://www.npmjs.com/package/express-validator
+npm install express-validator
+
+mongodb (mongodatabase)
+https://www.npmjs.com/package/mongodb
+npm install mongodb --save
+
+mongoose (to interact with database)
+https://www.npmjs.com/package/mongoose
+npm install mongoose
+
+passport (used for authentication purpose)
+https://www.npmjs.com/package/passport
+npm install passport
+
+passports (used for authentication purpose) optional
+https://www.npmjs.com/package/passports
+npm install passports
+
+passport-local (used for authentication purpose)
+https://www.npmjs.com/package/passport-local
+npm install passport-local
+
+passport-http (used for authentication purpose)
+https://www.npmjs.com/package/passport-http
+npm install passport-http
