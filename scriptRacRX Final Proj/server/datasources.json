@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "Oracle_Database": {
+    "host": "localhost",
+    "port": 1521,
+    "database": "pdborcl",
+    "password": "med",
+    "name": "Oracle_Database",
+    "user": "ScriptracRx",
+    "connector": "oracle"
+  }
+}

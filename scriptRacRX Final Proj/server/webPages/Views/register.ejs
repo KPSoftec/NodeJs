@@ -1,0 +1,54 @@
+        <!--<div class="container">
+           <div class="login-container">
+               <div class="panel-body">
+            <div id="output"></div>
+                <div class="avatar"></div>
+                <div class="form-box">
+                    <form action="" method="">
+                        <input name="user" type="text" placeholder="E-mail / username">
+                        <input type="password" placeholder="password">
+                        <input type="password" placeholder="confirm password">
+                        <button class="btn btn-info btn-block login" type="button">Register</button>
+                    </form>
+                </div>
+               </div>
+            </div>
+        </div>-->
+
+<!--<h2 class="page-header">Register</h2>-->
+
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2"><!--4 4-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sign up</h3>
+            </div>
+                <div class="avatar"></div> 
+            <div class="panel-body">
+                <form accept-charset="UTF-8" role="form" method="POST" action="/users/register">
+                <fieldset>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Username" name="username" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="E-mail" name="email" type="email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Confirm Password" name="cpassword" type="password" value="">
+                    </div>
+                        <button class="btn btn-info btn-block login" type="submit">Register</button>
+                </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
