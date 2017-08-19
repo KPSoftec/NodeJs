@@ -82,3 +82,8 @@ npm install passport-local
 passport-http (used for authentication purpose)
 https://www.npmjs.com/package/passport-http
 npm install passport-http
+
+********************************************
+        How to start this project
+********************************************
+npm start
