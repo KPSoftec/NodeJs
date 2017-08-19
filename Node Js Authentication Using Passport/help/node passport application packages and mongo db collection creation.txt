@@ -83,7 +83,12 @@ passport-http (used for authentication purpose)
 https://www.npmjs.com/package/passport-http
 npm install passport-http
 
+nodemon (used for auto restart app on save) install it as devv dependency
+https://www.npmjs.com/package/nodemon
+npm install --save-dev nodemon
+
 ********************************************
         How to start this project
 ********************************************
+node app.js
 npm start

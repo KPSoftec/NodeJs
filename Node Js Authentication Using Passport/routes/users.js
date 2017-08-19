@@ -32,11 +32,6 @@ router.post('/register',function(req,res){
     var password = req.body.password;
     var cpassword = req.body.cpassword;
 
-    console.log(username);
-    console.log(email);
-    console.log(password);
-    console.log(cpassword);
-
 //Validation
     req.checkBody('username','username is Required').notEmpty();
     req.checkBody('email','Please provide Email.').notEmpty();
@@ -50,10 +45,7 @@ router.post('/register',function(req,res){
         res.render('register',{
             errors:errors
         });
-console.log('Errors found.');
-    }else{
-console.log('No Errors found.');
-        
+    }else{  
         var newUser = new User({
             username:username,
             email:email,
@@ -62,7 +54,6 @@ console.log('No Errors found.');
 
         User.createUser(newUser,function(err, user){
             if(err) throw err;
-            console.log(user);
             req.flash('error_msg','Something went wrong , Please try again. ');
         });
 
@@ -76,6 +67,23 @@ console.log('No Errors found.');
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
+      if(username.indexOf('@')>0)
+        User.getUserByEmail(username, function(err, user){
+            if(err) throw err;
+            if(!user){
+                return done(null,false,{message:'Unkknown User'});
+            }
+    
+            User.comparePassword(password,user.password, function(err, isMatch){
+                if(err) throw err ;
+                if(isMatch){
+                    return done(null, user);
+                }else{
+                    return done(null, faalse , {message:"Password Mismatch"});
+                }
+            });
+        }); 
+      else
     User.getUserByUserName(username, function(err, user){
         if(err) throw err;
         if(!user){

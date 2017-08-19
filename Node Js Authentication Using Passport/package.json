@@ -4,7 +4,7 @@
   "description": "Node Authentication application Using Passport .",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Karan Khilwani",
@@ -25,5 +25,8 @@
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
     "passports": "^0.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
